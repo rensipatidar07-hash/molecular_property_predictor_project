@@ -26,7 +26,7 @@ def train_and_test(X, df, dataset_info):
         rf_preds = rf.predict(X_test)
 
         rf_rmse = np.sqrt(np.mean((y_test - rf_preds) ** 2))
-        print("Random Forest RMSE:", round(rf_rmse, 4))
+        return rf, rf_rmse
     else:
         X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42, stratify=y)
@@ -44,4 +44,4 @@ def train_and_test(X, df, dataset_info):
         probs = rf.predict_proba(X_test)[:, 1]
         auc = roc_auc_score(y_test, probs)
 
-        print("ROC-AUC Score:", round(auc, 4))
+        return rf, auc
