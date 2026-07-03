@@ -69,12 +69,8 @@ http://localhost:8501
 
 ---
 
-## Live Demo
-
-Click here to try the deployed application:
-
-**<your Streamlit deployment URL>**
-
+### Live Demo
+https://molecularpropertypredictorproject-irmj2zzcntx7nwhxipw2kf.streamlit.app/
 ---
 
 ## Using the Web App
